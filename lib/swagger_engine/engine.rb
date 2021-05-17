@@ -4,7 +4,7 @@ module SwaggerEngine
 
     #https://gist.github.com/parndt/11381872
 =begin
-    initializer "swagger_engine.assets.precompile", group: :all do |app|
+    initializer "swagger_engine.assets.precompile", :group => :all do |app|
       app.config.assets.precompile += ['swagger_engine/print.css', 'swagger_engine/reset.css']
     end
 =end
@@ -15,7 +15,7 @@ module SwaggerEngine
   end
 
   class Configuration
-    #[{ default: "swagger.json" }]
+    #[{ :default => "swagger.json" }]
     attr_accessor :json_files
     attr_accessor :admin_username
     attr_accessor :admin_password
